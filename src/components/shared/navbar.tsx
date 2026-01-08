@@ -13,10 +13,10 @@ export function Navbar() {
                 <Link href="#precos" className="text-sm text-slate-600 hover:text-blue-600 transition-colors">Planos</Link>
                 <div className="h-4 w-[1px] bg-slate-200" />
                 <Button variant="ghost" className="text-slate-600" asChild>
-                    <Link href="http://app.localhost:3000/login">Entrar</Link>
+                    <Link href="/login">Entrar</Link>
                 </Button>
                 <Button className="bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-200" asChild>
-                    <Link href="http://app.localhost:3000/register">Criar conta Izzin</Link>
+                    <Link href="/register">Criar conta Izzin</Link>
                 </Button>
             </div>
         </nav>
