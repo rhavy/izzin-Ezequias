@@ -1,0 +1,90 @@
+ezequias-saas/
+├── prisma/                          # Esquemas do banco de dados (MySQL)
+│   └── schema.prisma                # Definição de tabelas: Usuários, Assinaturas, Sites, Leads
+├── public/                          # Arquivos estáticos (Logos, ícones, fontes)
+├── src/
+│   ├── app/                         # App Router (Next.js 14/15)
+│   │   ├── (auth)/                  # Agrupamento para Login/Cadastro/Recuperação
+│   │   ├── (dashboard)/             # Área logada do usuário (Líder/Empresa)
+│   │   │   ├── crm/                 # Gestão de Leads
+│   │   │   ├── editor/              # Interface do Editor Arrasta-e-Solta
+│   │   │   ├── email-funnels/       # Configuração de automação
+│   │   │   └── team/                # Gestão de equipes ilimitadas
+│   │   ├── (admin)/                 # Painel master para você gerenciar os assinantes
+│   │   └── api/                     # Rotas de API (Webhooks de pagamento, Integrações)
+│   │       ├── auth/[...nextauth]/  # Configuração do Better-auth
+│   │       ├── payments/            # Webhooks (Mercado Pago, Stripe, Pix)
+│   │       └── webhooks/            # Gatilhos externos
+│   ├── components/                  # Componentes de UI reaproveitáveis
+│   │   ├── ui/                      # Componentes base (Botões, Inputs - ex: Shadcn/ui)
+│   │   ├── editor/                  # Componentes específicos do construtor de sites
+│   │   ├── charts/                  # Gráficos do CRM e performance
+│   │   └── shared/                  # Layouts comuns (Navbar, Sidebar)
+│   ├── hooks/                       # Hooks personalizados (ex: useSubscription, useDebounce)
+│   ├── lib/                         # Configurações de bibliotecas (Prisma client, Stripe, Redis)
+│   │   ├── prisma.ts
+│   │   ├── redis.ts
+│   │   └── mailer.ts                # Configuração de disparo de e-mails
+│   ├── services/                    # Regras de negócio (Camada de serviço)
+│   │   ├── payment-service.ts       # Lógica de cobrança e planos
+│   │   ├── site-service.ts          # Lógica de publicação e domínios customizados
+│   │   └── affiliate-service.ts     # Lógica de comissionamento
+│   ├── store/                       # Gerenciamento de estado (Zustand ou Redux)
+│   ├── types/                       # Definições de TypeScript (Interfaces e Types)
+│   └── utils/                       # Funções utilitárias (Formatação de moeda, datas)
+├── .env                             # Variáveis de ambiente (DB_URL, API_KEYS)
+├── middleware.ts                    # Proteção de rotas e subdomínios customizados
+├── next.config.js                   # Configurações do Next.js
+└── tailwind.config.js               # Personalização de cores e temas 
+
+-> mudando essa estrutura para -> 
+ezequias-saas/
+├── prisma/                          # Esquemas do banco de dados (MySQL)
+│   └── schema.prisma                # Definição de tabelas: Usuários, Assinaturas, Sites, Leads
+├── public/                          # Arquivos estáticos (Logos, ícones, fontes)
+├── src/
+│   ├── app/                         # App Router (Next.js 14/15)
+│   │   ├── (auth)/                  # Agrupamento para Login/Cadastro/Recuperação
+
+│   │   ├── (dashboard_Lider)/             # Área logada do usuário (Líder/Empresa) ele tem controle sobre o grupo dele
+│   │   │   ├── crm/                 # Gestão de Leads
+│   │   │   ├── equipes/             # Acompanhe o desempenho dos seus consultores em tempo real.
+│   │   │   ├── editor/              # Interface do Editor Arrasta-e-Solta
+│   │   │   ├── email-funnels/       # Configuração de automação
+│   │   │   └── afiliados/           # Configure comissões e acompanhe o crescimento da sua rede de revendedores como opçoes de resolver problemas (como editar o site do afiliado, mudança de plano, reaticação de conta, mudaça de dominio) .
+│   │   │   └── team/                # Gestão de equipes ilimitadas
+│   │   │   └── configuracoes/       # Configure a identidade visual e o domínio da sua própria plataforma.
+
+│   │   ├── (dashboard_Afiliado)/     # Área logada do usuário (Afiliado) ele tem controle domente sobre sua propia conta 
+│   │   ├── editor/                   # Interface do Editor Arrasta-e-Solta
+│   │   ├── email-funnels/            # Configuração de automação
+│   │   ├── White Label/              # Configure a identidade visual e o domínio da sua própria plataforma.
+
+│   │   ├── (admin)/                 # Painel master para você gerenciar os assinantes e todas a assinaturas (Líder/Empresa) ou (afiliado)
+│   │   │   ├── (dashboard_Admin)/             # Área logada do usuário (Líder/Empresa) ele tem controle sobre o grupo dele
+
+│   │   └── api/                     # Rotas de API (Webhooks de pagamento, Integrações)
+│   │       ├── auth/[...nextauth]/  # Configuração do Better-auth
+│   │       ├── payments/            # Webhooks (Mercado Pago, Stripe, Pix)
+│   │       └── webhooks/            # Gatilhos externos
+│   ├── components/                  # Componentes de UI reaproveitáveis
+│   │   ├── ui/                      # Componentes base (Botões, Inputs - ex: Shadcn/ui)
+│   │   ├── editor/                  # Componentes específicos do construtor de sites
+│   │   ├── charts/                  # Gráficos do CRM e performance
+│   │   └── shared/                  # Layouts comuns (Navbar, Sidebar)
+│   ├── hooks/                       # Hooks personalizados (ex: useSubscription, useDebounce)
+│   ├── lib/                         # Configurações de bibliotecas (Prisma client, Stripe, Redis)
+│   │   ├── prisma.ts
+│   │   ├── redis.ts
+│   │   └── mailer.ts                # Configuração de disparo de e-mails
+│   ├── services/                    # Regras de negócio (Camada de serviço)
+│   │   ├── payment-service.ts       # Lógica de cobrança e planos
+│   │   ├── site-service.ts          # Lógica de publicação e domínios customizados
+│   │   └── affiliate-service.ts     # Lógica de comissionamento
+│   ├── store/                       # Gerenciamento de estado (Zustand ou Redux)
+│   ├── types/                       # Definições de TypeScript (Interfaces e Types)
+│   └── utils/                       # Funções utilitárias (Formatação de moeda, datas)
+├── .env                             # Variáveis de ambiente (DB_URL, API_KEYS)
+├── middleware.ts                    # Proteção de rotas e subdomínios customizados
+├── next.config.js                   # Configurações do Next.js
+└── tailwind.config.js               # Personalização de cores e temas

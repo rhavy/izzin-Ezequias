@@ -1,0 +1,48 @@
+
+> izzin@0.1.0 build
+> next build
+
+Ôû▓ Next.js 16.1.1 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 4.1s
+  Running TypeScript ...
+  Collecting page data using 27 workers ...
+  Generating static pages using 27 workers (0/24) ...
+  Generating static pages using 27 workers (6/24) 
+  Generating static pages using 27 workers (12/24) 
+  Generating static pages using 27 workers (18/24) 
+Ô£ô Generating static pages using 27 workers (24/24) in 13.9s
+  Finalizing page optimization ...
+
+Route (app)
+Ôöî Ôùï /
+Ôö£ Ôùï /_not-found
+Ôö£ ãÆ /api/payments
+Ôö£ ãÆ /api/webhooks
+Ôö£ Ôùï /assinantes
+Ôö£ Ôùï /dashboard_Admin
+Ôö£ Ôùï /dashboard_Afiliado
+Ôö£ Ôùï /dashboard_Afiliado/editor
+Ôö£ Ôùï /dashboard_Afiliado/email-funnels
+Ôö£ Ôùï /dashboard_Afiliado/White_Label
+Ôö£ Ôùï /dashboard_Lider
+Ôö£ Ôùï /dashboard_Lider/afiliados
+Ôö£ Ôùï /dashboard_Lider/configuracoes
+Ôö£ Ôùï /dashboard_Lider/crm
+Ôö£ Ôùï /dashboard_Lider/editor
+Ôö£ Ôùï /dashboard_Lider/email-funnels
+Ôö£ Ôùï /dashboard_Lider/equipes
+Ôö£ Ôùï /dashboard_Lider/team
+Ôö£ Ôùï /login
+Ôö£ Ôùï /loginAdmin
+Ôö£ Ôùï /register
+Ôöö Ôùï /seguranca
+
+
+ãÆ Proxy (Middleware)
+
+Ôùï  (Static)   prerendered as static content
+ãÆ  (Dynamic)  server-rendered on demand
+
